@@ -5,7 +5,7 @@ import bs4
 from bs4 import BeautifulSoup
 from bs4.dammit import EntitySubstitution
 
-import constants
+from . import constants
 
 
 def create_html_from_fragment(tag):
