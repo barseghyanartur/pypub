@@ -19,8 +19,8 @@ try:
 except ImportError:
     lxml_module_exists = False
 
-from constants import *
-import chapter
+from .constants import *
+from . import chapter
 
 requests.packages.urllib3.disable_warnings()
 
