@@ -42,7 +42,7 @@ def clean(input_string,
     Doctype is set to <!DOCTYPE html>.
 
     Args:
-        input_string (basestring): A (possibly unicode) string representing HTML.
+        input_string (str): A (possibly unicode) string representing HTML.
         tag_dictionary (Option[dict]): A dictionary with tags as keys and
             attributes as values. This operates as a whitelist--i.e. if a tag
             isn't contained, it will be removed. By default, this is set to
@@ -56,7 +56,7 @@ def clean(input_string,
         TypeError: Raised if input_string isn't a unicode string or string.
     """
     try:
-        assert isinstance(input_string, basestring)
+        assert isinstance(input_string, str)
     except AssertionError:
         raise TypeError
     root = BeautifulSoup(input_string, 'html.parser')
@@ -110,7 +110,7 @@ def condense(input_string):
         TypeError: Raised if input_string isn't a unicode string or string.
     """
     try:
-        assert isinstance(input_string, basestring)
+        assert isinstance(input_string, str)
     except AssertionError:
         raise TypeError
     removed_leading_whitespace = re.sub('>\s+', '>', input_string).strip()
@@ -132,7 +132,7 @@ def html_to_xhtml(html_unicode_string):
         TypeError: Raised if input_string isn't a unicode string or string.
     """
     try:
-        assert isinstance(html_unicode_string, basestring)
+        assert isinstance(html_unicode_string, str)
     except AssertionError:
         raise TypeError
     root = BeautifulSoup(html_unicode_string, 'html.parser')
