@@ -5,7 +5,7 @@ import os
 import shutil
 import tempfile
 import urllib
-import urlparse
+from urllib.parse import urlparse
 import uuid
 
 import bs4
