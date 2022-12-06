@@ -86,7 +86,7 @@ def clean(input_string,
     for node in image_node_list:
         if not node.has_attr('src'):
             node.extract()
-    unformatted_html_unicode_string = unicode(root.prettify(encoding='utf-8',
+    unformatted_html_unicode_string = str(root.prettify(encoding='utf-8',
                                                             formatter=EntitySubstitution.substitute_html),
                                               encoding='utf-8')
     # fix <br> tags since not handled well by default by bs4
