@@ -144,7 +144,7 @@ def html_to_xhtml(html_unicode_string):
                          'string is the following: %s', unicode(root)]))
     # Add xmlns attribute to html node
     root.html['xmlns'] = 'http://www.w3.org/1999/xhtml'
-    unicode_string = unicode(root.prettify(encoding='utf-8', formatter='html'), encoding='utf-8')
+    unicode_string = str(root.prettify(encoding='utf-8', formatter='html'), encoding='utf-8')
     # Close singleton tag_dictionary
     for tag in constants.SINGLETON_TAG_LIST:
         unicode_string = unicode_string.replace(
