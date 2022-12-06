@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 from bs4.dammit import EntitySubstitution
 import requests
 
-import clean
+from . import clean
 
 
 class NoUrlError(Exception):
